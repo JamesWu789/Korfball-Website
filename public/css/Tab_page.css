@@ -1,0 +1,274 @@
+#edit-icon, #delete-icon, #delete-account-icon, #delete-work-icon {
+  block-size: 20px;
+  width: 20px;
+}
+
+.form-group{
+  color:#fff;
+  margin-bottom: 1rem;
+}
+label .form-group{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form-control .form-group{
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: #EAF0ED;
+  height: auto;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  
+}
+
+.form-control{
+  border:1px solid #EAF0ED;
+}
+.hidden {
+  display: none;
+}
+
+.modal, .edit-form {
+  position:  absolute;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  margin: 0rem 3rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 30pt;
+  /* cursor: pointer; */
+  z-index: 4;
+}
+
+
+.overlay {
+  position:  absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+}
+
+body{
+  height:100%;
+  background-color: rgb(61, 60, 60);
+  margin:0;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+header{
+  /* 控制block內上下置中*/
+  display: flex;  
+  flex-wrap: wrap;          
+  align-items: center;
+  justify-content: center;
+  /* padding: 2pt; */
+  background:  rgb(250,189,0);  
+}
+header * {
+  color: white;
+  display: inline-block;
+  /* overflow: hidden;
+  padding-top: 10px;
+  vertical-align: auto; */
+}  
+main{
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(61, 60, 60);
+}
+
+#logo_small{
+  padding: 0 12pt;
+}
+#logout{
+  font-size: 13pt;
+  font-weight: 700;
+  color: white;
+  padding: 7pt 13pt;
+  border-radius: 10px;
+  background-color:  rgb(84, 113, 199);
+}
+#logo_user{
+  padding-left: calc(100% - 440pt);
+  padding-right: 1%;
+}
+
+#tabs{
+  display: inline-block;
+  height:100%;
+  float: left;
+  padding-top: 40pt;
+  padding-bottom: 254pt;
+}
+#plus-icon{
+  border-radius: 10px;
+  background-color: rgb(84, 113, 199);
+  color: white;
+  display: block;
+  padding-left : 4pt;
+  padding-bottom: 8pt;
+  padding-top:8pt;
+  width:105px;
+  margin-top: 10pt;
+  margin-bottom: 8pt;
+  box-shadow: 1.5px 1.5px 1.5px rgb(68, 67, 67);
+  letter-spacing: 0.5pt;
+  font-size: 12.5pt;
+  /* font-weight: 600; */
+}
+#plus-icon:hover, #logout:hover, .edit-data:hover, .cancel:hover{
+  background-color: rgb(99, 124, 201);
+}
+div, table{
+  display:  block;
+  /* float: left; */
+}
+div>p{
+  display: flex;
+  /* background-color: gray; */
+  /* list-style-type: none; */
+  font-size: 12pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+  height: 45pt;
+  /* justify-content: center; */
+  align-items: center;
+}
+div>p:hover {
+  background-color:  gray;
+}
+img + p{
+  padding-right: 10pt; 
+}
+p > img{
+  padding-right: 5pt;
+}
+.btn{
+  font-size: 12pt;
+  color: white;
+}
+
+::placeholder {
+  color: #ffffff;
+  }
+
+.hidden {
+  display: none;
+}
+#show_table{
+  padding: 0 30pt;
+  background-color: gray;
+  margin-left: 120pt;
+  padding-bottom: 35pt;
+  padding-top: 2pt;
+}
+.Add-data, .edit-data, .cancel{
+  font-size: 15pt;
+  padding: 6pt;
+  border: none;
+  color: white;
+  background-color: rgb(84, 113, 199);
+  border-radius: 8pt;
+  margin-top: 23pt;
+  margin-left: 197pt;
+}
+.cancel{
+  margin-left: 0;
+  font-weight: 200;
+  padding-top:9pt; 
+}
+h3{
+  display: inline-block;
+  padding-inline-start: 70pt;
+  margin: 7pt auto 15pt auto;
+}
+.close-modal{
+  margin-left: 50pt;
+  vertical-align: top;
+}
+.scroll {
+  /* width: 100%;  */
+  border-collapse: collapse;
+  border-spacing: 00;
+  /* border: 2px solid rgb(255, 255, 255); */
+}
+tbody, thead { display: block; }
+/* 標題 */
+th { 
+  height: 40px;
+  line-height: 40px;
+  text-indent: 12pt;
+  background-color: rgb(81, 81, 81);
+  color: white;
+  /* text-align: left; */
+}
+
+tbody{
+  height: 350pt;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  /* 表格加上右邊srcoll bar*/
+  width: calc(100% + 13pt);
+  overflow-y: scroll;   
+  overflow-x: scroll;
+  border-top: 2px solid rgb(255, 255, 255); 
+  line-height: 50px;
+  text-align: center;
+}
+td, th {
+  /* width: 20%; */ /* Optional */
+  /* border-right: 1px solid rgb(255, 255, 255); */
+  /* white-space: nowrap; */
+}
+tr td:last-child a{
+  font-size: 3ft;
+}
+
+/* tbody td:last-child, thead th:last-child {
+  border-right: none;
+} */
+table{
+  table-layout: fixed;
+  /* width: 100%; */
+  /* border-collapse:separate; */
+}
+td, th {
+  width: 150pt;  
+}
+td{
+  /* border-bottom:rgb(255, 255, 255) 1px solid; */
+}
+
+/* 表格上欄 上下箭頭*/
+.tablesorter-default .header,.tablesorter-default .tablesorter-header{
+background-image:url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+background-position:center right;
+background-repeat:no-repeat;
+cursor:pointer;
+white-space:normal;
+padding:4px 20px 4px 4px;
+}
+
+.tablesorter-default td{
+  /* padding:4px; */
+}
+
+/* hover變色 */
+.tablesorter-default tbody>tr.even:hover>td,.tablesorter-default tbody>tr.hover>td,.tablesorter-default tbody>tr.odd:hover>td,.tablesorter-default tbody>tr:hover>td{
+  background-color:rgb(243, 123, 43);
+}
+  

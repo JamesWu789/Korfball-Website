@@ -1,0 +1,40 @@
+<%- include('../include/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/Tab_page.css">
+
+    </head>
+
+    <body>
+        <main>
+            <form class="edit-form" action="/admin/work/edit-work" method="POST">
+                <h1>修改資料</h1>
+                <label>師傅
+                    <input type="text" name="worker" value="<%= works['worker'] %>">
+                </label>
+                <br>
+                <label>項目
+                    <input type="text" name="workItem" value="<%= works['workItem'] %>">
+                </label>
+                <br>
+                <label>尺寸
+                    <input type="text" name="specification" value="<%= works['specification'] %>">
+                </label>
+                <br>
+                <label>數量
+                    <input type="number" name="quantity" value="<%= works['quantity'] %>">
+                </label>
+                <br>
+                <label>地址
+                    <input type="text" name="location" value="<%= works['location'] %>">
+                </label>
+                <br>
+                <label>日期
+                    <input type="date" name="date" value="<%= works['date'] %>">
+                </label>
+                <br>
+                <input type="hidden" value="<%= works._id %>" name="workId">
+                <button type="submit" class="edit-data">修改</button>
+                <a class="cancel" href="/work?edit=true">取消</a>
+            </form>
+        </main>
+    </body>

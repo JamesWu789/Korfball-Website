@@ -1,0 +1,122 @@
+*{
+    color: white;
+}
+
+form{
+    display: inline-block;
+    /* justify-content: center;     */
+    /* 垂直置中 */
+    align-content: center;
+    text-align: left;
+}
+
+body{
+    margin-top: 0;
+    background:  rgb(250,189,0);
+    text-align: center;
+
+    /* 將下游都壓縮進來 */
+    /* display: flex; */
+    /* 水平置中 */
+    /* justify-content: center; */
+}
+
+#a_regist{
+    /* 包含底線消失 */
+    text-decoration: none;   
+}
+/* main{
+    overflew：hidden;
+} */
+header{
+    display: inline-block;
+    
+    height: 50px;     /* 沒高度設margin也沒用*/
+    letter-spacing: 1pt;
+    font-weight: bold;
+    font-size: 14pt; 
+    color: white;
+    /* line-height: 4; */
+    
+    /* clear: both;
+    display: block;
+    margin-bottom: 50; */
+}
+
+div, button{
+
+    /* 框框大小 */
+    background-color: white;
+    width: 280px;
+    height: 55px;
+
+    border-radius: 10px;
+    /* 文字置中 */
+    text-align: center; 
+
+    /* 上下是0 左右置中 */
+    margin: 0.5px auto;
+}
+
+button{
+    font-size: 12pt;
+    font-weight: 800 ;
+    border: none;
+    background-color: rgb(105, 131, 208);
+    margin: 18px auto;
+    display: block;
+}
+#logo{
+    margin:7pt auto;
+}
+.icon{
+    /* 可以跟文字放在一起(左右) */
+    float: left;
+}
+
+div{
+    display: flex;  /*底下都可以動*/
+    justify-content: center;    
+    /* 垂直置中 */
+    align-items: center;
+}
+
+input{
+    color: black;
+    outline: none;
+    font-size: 12pt;
+    border: none;
+    text-indent: 22pt;      /* 文字開頭空格*/ 
+}
+
+input::placeholder {
+    color: rgb(145, 142, 142);
+    /* 文字位置 */
+    text-indent: 26pt;
+    
+}
+
+div>img{
+    float: left;
+    padding-bottom: 0;
+}
+
+form{
+    display: inline-block;
+    margin-left: 70px;
+}
+
+#a_forget{
+    display: inline-block;
+    position:relative;
+    top:-75px;
+    left: 8px;
+}
+
+#a_regist{
+    letter-spacing: 1pt;
+}
+
+#login:hover {
+    background-color:  rgb(71, 102, 194);
+  }

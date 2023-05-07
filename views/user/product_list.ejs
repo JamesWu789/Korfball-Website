@@ -1,0 +1,73 @@
+<%- include('../include/head.ejs') %>
+    <!--為了tab用 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!--為了tableSorter用 -->
+    <script type="text/javascript" src="/include/jquery.tablesorter.js"></script>
+    <!-- 上傳 -->
+    <!-- <script src="//xieyufei.com/js/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <%- include('../include/user_anchor.ejs') %>
+
+        <!-- 庫存 -->
+        <div id="show_table">
+            <a id="plus-icon">
+                <img src="/icon/add.png" alt="新增" height="20">
+                新增資料
+            </a>
+            <form action='/uploadFile' enctype="multipart/form-data" method='POST'>
+                <input type="file" name='myFile'>
+                <button type="submit">上傳</button>
+            </form>
+            <a href="/wordEdit">WORD edit Demo</a>
+            <table class="scroll" id="myTable">
+                <thead>
+                    <tr>
+                        <th>供應商</th>
+                        <th>編號</th>
+                        <th>尺寸 (呎)</th>
+                        <th>數量 (碼)</th>
+                        <th>價格</th>
+                        <th>材質</th>
+                        <th>編輯</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <!-- 更改圖示 -->
+                            <a>
+                                <img src="/icon/revision.png" alt="修改" height="20">
+                                修改
+                            </a>
+                            <!-- 刪除圖示 -->
+                            <a>
+                                <img src="/icon/garbage.png" alt="刪除" height="20" >
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main> 
+</body>

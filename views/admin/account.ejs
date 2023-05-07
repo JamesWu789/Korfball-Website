@@ -1,0 +1,44 @@
+<%- include('../include/head.ejs') %>
+    <link rel="stylesheet" href="/css/account.css">
+
+    <%- include('../include/admin_anchor.ejs') %>
+
+
+        <!-- 帳號 -->
+        <div class="account_card">
+            <% for (let account of accou) { %>
+                <article class="card">
+                    <header>
+                        <h3>
+                            <%= account.workerName %>
+                        </h3>
+                    </header>
+                    <div class="pic">
+                        <img src="/pic/<%=account.workerName %>.jpg" alt="<%= account.workerName %>" width="200pt">
+                    </div>
+                    <div class="content">
+                        <p>專業:
+                            <%= account.workItem %>
+                        </p>
+                        <p>電話:
+                            <%= account.phoneNum %>
+                        </p>
+                    </div>
+                    <!-- 修改圖示 -->
+                    <div class="account_bottom"> 
+                        <a href="/admin/account/edit-account/<%= account._id %>" id="edit-icon">
+                            <img src="/icon/revision.png" alt="修改" height="20">
+                            修改
+                        </a>
+                        <!-- 刪除圖示 -->
+                        <!-- 不同頁面同一個jQuery功能要不同 id 命名 -->
+                        <a href="/admin/account/delete-account/<%= account._id %>" id="delete-account-icon">
+                            <img src="/icon/garbage.png" alt="刪除" height="20">
+                            刪除
+                        </a>
+                    </div>    
+                </article>
+            <% } %>
+        </div>            
+    </main>
+</body>

@@ -1,0 +1,40 @@
+<%- include('../include/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/Tab_page.css">
+
+    </head>
+
+    <body>
+        <main>
+            <form class="edit-form" action="/admin/product/edit-product" method="POST">
+                <h2>修改資料</h2>
+                <label>供應商
+                    <input type="text" name="provider" value="<%= prods['provider'] %>">
+                </label>
+                <br>
+                <label>編號
+                    <input type="number" name="idNumber" value="<%= prods['idNumber'] %>">
+                </label>
+                <br>
+                <label>尺寸
+                    <input type="text" name="specification" value="<%= prods['specification'] %>">
+                </label>
+                <br>
+                <label>數量
+                    <input type="number" name="quantity" value="<%= prods['quantity'] %>">
+                </label>
+                <br>
+                <label>價格
+                    <input type="number" name="price" value="<%= prods['price'] %>">
+                </label>
+                <br>
+                <label>材質
+                    <input type="text" name="texture" value="<%= prods['texture'] %>">
+                </label>
+                <br>
+                <input type="hidden" value="<%= prods._id %>" name="productId">
+                <button type="submit" class="edit-data">修改</button>
+                <a class="cancel" href="/product?edit=true">取消</a>
+            </form>
+        </main>
+    </body>

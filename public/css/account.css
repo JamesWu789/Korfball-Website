@@ -1,0 +1,180 @@
+#edit-icon, #delete-icon, #delete-account-icon, #delete-work-icon {
+  block-size: 20px;
+  width: 20px;
+}
+
+.form-group{
+  color:#fff;
+  margin-bottom: 1rem;
+}
+label .form-group{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form-control .form-group{
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: #EAF0ED;
+  height: auto;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  
+}
+
+.form-control{
+  border:1px solid #EAF0ED;
+}
+
+
+body{
+  height:100%;
+  background-color: rgb(61, 60, 60);
+  margin:0;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+header{
+  /* 控制block內上下置中*/
+  display: flex;  
+  flex-wrap: wrap;          
+  align-items: center;
+  justify-content: center;
+  /* padding: 2pt; */
+  background:  rgb(250,189,0);  
+}
+header * {
+  color: white;
+  display: inline-block;
+  /* overflow: hidden;
+  padding-top: 10px;
+  vertical-align: auto; */
+}  
+main{
+  display: inline;
+  width: 100%;
+  background-color: rgb(61, 60, 60);
+  
+}
+
+#logo_small{
+  padding: 0 12pt;
+}
+#logout{
+  font-size: 13pt;
+  font-weight: 700;
+  color: white;
+  padding: 7pt 13pt;
+  border-radius: 10px;
+  background-color:  rgb(114, 135, 198);
+}
+#logo_user{
+  padding-left: calc(100% - 440pt);
+  padding-right: 1%;
+}
+
+#tabs{
+  display: inline-block;
+  height:100%;
+  float: left;
+  padding-top: 40pt;
+  padding-bottom: 254pt;
+}
+
+div{
+  display:  block;
+  /* float: left; */
+}
+div>p{
+  display: flex;
+  /* background-color: gray; */
+  /* list-style-type: none; */
+  font-size: 12pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+  height: 45pt;
+  /* justify-content: center; */
+  align-items: center;
+}
+/* div>p:hover {
+  background-color:  gray;
+} */
+img + p{
+  padding-right: 10pt; 
+}
+p > img{
+  padding-right: 5pt;
+}
+.btn{
+  font-size: 12pt;
+  color: white;
+}
+
+::placeholder {
+  color: #ffffff;
+  }
+
+
+/* for account */
+.account_card{
+  margin-bottom: 0;
+  margin-left: 120pt;
+  width: calc(100% - 120pt);
+  height: 477pt;
+  max-height: calc(100% - 100pt);
+  /* display: block; */
+  text-align: center;
+  overflow-y: auto;
+  background-color: gray;
+}
+
+.card{
+  display: inline-block;
+  background-color: white;
+  /* border: 2px solid rgb(255, 255, 255); */
+  margin: 20pt;
+  width: 200pt;  
+}
+
+.content>p{
+  display: block;
+  font-size: 12pt;
+  margin:0;
+  padding-left: 0pt;
+  padding-right: 0pt;
+  height: 30pt;
+}
+.pic{
+  margin: 10pt auto;
+  display: block;
+  width: 200pt;
+  height: 200pt;
+}
+.pic > img{
+  border-radius: 50%;
+  /* object-fit: contain; */
+}
+
+.content, .pic, .card{
+  text-align: center;
+}
+
+.account_bottom{
+  padding-top: 5pt;
+  padding-bottom: 5pt;
+  background-color: rgb(204, 204, 204);
+}
+#tabs>p:hover {
+  background-color:  gray;
+}
+
+#logout:hover{
+  background-color: rgb(99, 124, 201);
+}

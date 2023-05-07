@@ -1,0 +1,67 @@
+<%- include('../include/head.ejs') %>
+    <!--為了tab用 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!--為了tableSorter用 -->
+    <script type="text/javascript" src="/include/jquery.tablesorter.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <%- include('../include/user_anchor.ejs') %>
+
+        <!-- 工作紀錄 -->
+        <div id="show_table">
+            <a id="plus-icon">
+                <img src="/icon/add.png" alt="新增" height="20">
+                新增資料
+            </a>
+            <table class="scroll" id="myTable">
+                <thead>
+                    <tr>                    
+                        <th>師傅</th>
+                        <th>項目</th>
+                        <th>尺寸</th>
+                        <th>數量</th>
+                        <th>地址</th>
+                        <th>日期</th>
+                        <th>編輯</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let num = 0; num < works.length; num++){ %>
+                        <tr>
+                            <td>
+                                <%= works[num]["worker"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["workItem"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["specification"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["quantity"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["location"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["date"] %>
+                            </td>
+                            <td>
+                                <!-- 更改圖示 -->
+                                <a>
+                                    <img src="/icon/revision.png" alt="修改" height="20">
+                                    修改
+                                </a>
+                                <!-- 刪除圖示 -->
+                                <a>
+                                    <img src="/icon/garbage.png" alt="刪除" height="20" >
+                                    刪除
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>

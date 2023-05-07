@@ -1,0 +1,98 @@
+<%- include('../include/head.ejs') %>
+    <!--為了tab用 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!--為了tableSorter用 -->
+    <script type="text/javascript" src="/include/jquery.tablesorter.js"></script>
+    <link rel="stylesheet" href="/css/Tab_page.css">
+
+    <%- include('../include/admin_anchor.ejs') %>
+
+        <!-- 工作紀錄 -->
+        <div id="show_table">
+            <a href='#' id="plus-icon">
+                <img src="/icon/add.png" alt="新增" height="20">
+                新增資料
+            </a>
+            <form class="modal hidden" action="/admin/work" method="POST">
+                <h3>新增資料</h3><button class="close-modal">&times;</button>
+                <br>
+                <label>師傅
+                    <input type="text" id="worker" name="worker">
+                </label>
+                <br>
+                <label>項目
+                    <input type="text" id="workItem" name="workItem">
+                </label>
+                <br>
+                <label>尺寸
+                    <input type="text" id="specification" name="specification">
+                </label>
+                <br>
+                <label>數量
+                    <input type="number" id="quantity" name="quantity">
+                </label>
+                <br>
+                <label>地址
+                    <input type="text" id="location" name="location">
+                </label>
+                <br>
+                <label>日期
+                    <input type="date" id="date" name="date">
+                </label>
+                <br>
+                <button type="submit" class="Add-data">新增</button>
+            </form>
+            <div class="overlay hidden"></div>
+
+            <table class="scroll" id="myTable">
+                <thead>
+                    <tr>
+                        <th>師傅</th>
+                        <th>項目</th>
+                        <th>尺寸</th>
+                        <th>數量</th>
+                        <th>地址</th>
+                        <th>日期</th>
+                        <th>編輯</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let num = 0; num < works.length; num++){ %>
+                        <tr>                       
+                            <td>
+                                <%= works[num]["worker"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["workItem"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["specification"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["quantity"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["location"] %>
+                            </td>
+                            <td>
+                                <%= works[num]["date"] %>
+                            </td>
+                            <td>
+                                <!-- 更改圖示 -->
+                                <a href="/admin/work/edit-work/<%= works[num]._id %>" id="edit-icon">
+                                    <img src="/icon/revision.png" alt="修改" id="<%=num%>" height="20">
+                                    修改
+                                </a>
+                                <!-- 刪除圖示 -->
+                                <a href="/admin/work/delete-work/<%= works[num]._id %>" id="delete-work-icon">
+                                    <img src="/icon/garbage.png" alt="刪除" id="<%=num%>" height="20">
+                                    刪除
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>

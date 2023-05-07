@@ -1,0 +1,28 @@
+{
+  "name": "Korfball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Korfball.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Korfball.js"
+  },
+  "author": "James_wu",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "docxtemplater": "^3.37.4",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jquery": "^3.6.3",
+    "jsdom": "^21.1.0",
+    "mongodb": "^5.1.0",
+    "mongoose": "^6.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pizzip": "^3.1.4"
+  }
+}

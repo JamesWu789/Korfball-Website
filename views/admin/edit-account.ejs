@@ -1,0 +1,48 @@
+<%- include('../include/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/Tab_page.css">
+
+    </head>
+
+    <body>
+        <main>
+            <form class="edit-form" action="/admin/account/edit-account" method="POST">
+                <h1>修改資料</h1>
+                <label>姓名
+                    <input type="text" name="workerName" value="<%= account['workerName'] %>">
+                </label>
+                <br>
+                <label>電話
+                    <input type="number" name="phoneNum" value="<%= account['phoneNum'] %>">
+                </label>
+                <br>
+                <label>專業
+                    <input type="text" name="workItem" value="<%= account['workItem'] %>">
+                </label>
+                <br>
+                <label>帳號
+                    <input type="text" name="account" value="<%= account['account'] %>">
+                </label>
+                <br>
+                <label>密碼
+                    <input type="text" name="password" value="<%= account['password'] %>">
+                </label>
+                <br>
+                <label>更改權限
+                    <input type="checkbox" name="editable" <% if (account[ 'editable' ]){ %>
+                    <%= 'checked' %>
+                        <% }%>>
+                </label>
+                <br>
+                <label>登入權限
+                    <input type="checkbox" name="readable" <% if (account[ 'readable' ]){ %>
+                    <%= 'checked' %>
+                        <% }%>>
+                </label>
+                <br>
+                <input type="hidden" value="<%= account._id %>" name="accountId">
+                <button type="submit" class="edit-data">修改</button>
+                <a class="cancel" href="/account?edit=true">取消</a>
+            </form>
+        </main>
+    </body>

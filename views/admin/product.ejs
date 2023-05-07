@@ -1,0 +1,99 @@
+<%- include('../include/head.ejs') %>
+    <!--為了tab用 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!--為了tableSorter用 -->
+    <script type="text/javascript" src="/include/jquery.tablesorter.js"></script>
+    <link rel="stylesheet" href="/css/Tab_page.css">
+
+    <%- include('../include/admin_anchor.ejs') %>
+
+        <!-- 庫存 -->
+        
+        <div id="show_table">
+            <a href='#' id="plus-icon">
+                <img src="/icon/add.png" alt="新增" height="20">
+                新增資料
+            </a>
+            <form class="modal hidden" action="/admin/product" method="POST">
+                <h3>新增資料</h3><button class="close-modal">&times;</button>
+                <br>
+                <label>供應商
+                    <input type="text" id="provider" name="provider">
+                </label>
+                <br>
+                <label>編號
+                    <input type="number" id="idNumber" name="idNumber">
+                </label>
+                <br>
+                <label>尺寸(呎)
+                    <input type="text" id="specification" name="specification">
+                </label>
+                <br>
+                <label>數量(碼)
+                    <input type="number" id="quantity" name="quantity">
+                </label>
+                <br>
+                <label>價格
+                    <input type="number" id="price" name="price">
+                </label>
+                <br>
+                <label>材質
+                    <input type="text" id="texture" name="texture">
+                </label>
+                <br>
+                <button type="submit" class="Add-data">新增</button>
+            </form>
+            <div class="overlay hidden"></div>
+
+            <table class="scroll" id="myTable">
+                <thead>
+                    <tr>
+                        <th>供應商</th>
+                        <th>編號</th>
+                        <th>尺寸 (呎)</th>
+                        <th>數量 (碼)</th>
+                        <th>價格</th>
+                        <th>材質</th>
+                        <th>編輯</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let num = 0; num < prods.length; num++){ %>
+                        <tr>
+                            <td>
+                                <%= prods[num]["provider"] %>
+                            </td>
+                            <td>
+                                <%= prods[num]["idNumber"] %>
+                            </td>
+                            <td>
+                                <%= prods[num]["specification"] %>
+                            </td>
+                            <td>
+                                <%= prods[num]["quantity"] %>
+                            </td>
+                            <td>
+                                <%= prods[num]["price"] %>
+                            </td>
+                            <td>
+                                <%= prods[num]["texture"] %>
+                            </td>
+                            <td>
+                                <!-- 更改圖示 -->
+                                <a href="/admin/product/edit-product/<%= prods[num]._id %>" id="edit-icon">
+                                    <img src="/icon/revision.png" alt="修改" id="<%=num%>" height="20">
+                                    修改
+                                </a>
+                                <!-- 刪除圖示 -->
+                                <a href="/admin/product/delete-product/<%= prods[num]._id %>" id="delete-icon">
+                                    <img src="/icon/garbage.png" alt="刪除" id="<%=num%>" height="20">
+                                    刪除
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </main>        
+</body>
