@@ -23,6 +23,7 @@
     "multer": "^1.4.5-lts.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "pizzip": "^3.1.4"
+    "pizzip": "^3.1.4",
+    "svg-captcha": "^1.4.0"
   }
 }

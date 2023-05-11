@@ -26,6 +26,13 @@
                     <img src="/icon/lock.png" alt="Lock" name='icon' width="40">
                     <input type='password' placeholder="請輸入密碼" name="password">
                 </div>
+                <br>
+                <div>
+                    <%- svgImg %>
+                    <br>
+                    <input type='hidden' value='<%=imgText %>'  name="imgText">
+                    <input type='text' placeholder="請輸入驗證碼" name="imgTest">
+                </div>
             </section>
             <button type='submit' id="login">登入</button>
         </form>

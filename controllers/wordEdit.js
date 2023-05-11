@@ -25,9 +25,9 @@ module.exports = (req,res)=>{
         // compression: DEFLATE adds a compression step.
         // For a 50MB output document, expect 500ms additional CPU time
         compression: "DEFLATE"
-});
+    });
 
     // 3. save output
-    fs.writeFileSync('./template/myTemplate - output.docx', buf); // doc);
+    fs.writeFileSync('./template/myTemplate - output.docx', buf); 
     res.redirect('/product');
-}
+    }

@@ -1,16 +1,36 @@
 const express = require('express');
 const router = express.Router();
-
+const svgCaptcha = require('svg-captcha');
 const passport = require('passport')
-// 加入 middleware，驗證 request 登入狀態
-router.post('/', passport.authenticate('local', {
+
+router.post('/', (req, res, next) =>{
+    //先做圖片驗證
+    if (req.body.imgTest.toLowerCase() !== req.body.imgText.toLowerCase()){ //不管大小寫
+        console.log('Img diff!!');
+        res.redirect('/');
+    }console.log('Img correct');
+    return next()
+    },
+    // 驗證可否登入
+    passport.authenticate('local', {
     successRedirect: '/product?edit=true',   //成功的話
     failureRedirect: '/'  
     }));
 
 router.get('/', (req, res, next) => {
+    const options = {   //圖片驗證
+        size: 4,
+        ignoreChars: '0o1i',
+        noise: 0,
+        color: false,
+      }
+    const captcha = svgCaptcha.create();
     console.log('ent:get');
-    res.render('entrance');
+    console.log(captcha.text);
+    res.render('entrance', {
+        imgText: captcha.text,
+        svgImg: captcha.data
+    });
 });
 
 // //登入判定
